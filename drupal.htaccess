@@ -1,0 +1,8 @@
+# This file is used for Drupal websites; it should be 
+# renamed to .htaccess and placed in <docroot>/.well-known,
+# e.g. in /home/foo/public_html/.well-known/.htaccess
+#
+# Override overly protective .htaccess in webroot
+#
+RewriteEngine On
+Satisfy Any
