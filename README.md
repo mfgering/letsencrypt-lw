@@ -64,6 +64,7 @@ Instructions and code for running letsencrypt on a CentOS 6 virtual private serv
     ```
 
     If the virtual host runs Drupal you will need to create .well-known/.htaccess with these contents:
+
     ``` bash
     #
     # Override overly protective .htaccess in webroot
@@ -71,16 +72,21 @@ Instructions and code for running letsencrypt on a CentOS 6 virtual private serv
     RewriteEngine On
     Satisfy Any
     ```
+
     Be sure to modify the ownership:
+
     ``` bash
     chown foo:nobody .wellknown/.htaccess
     ```
+
 7. Run letsencrypt-auto for each cert you need to generate or renew
-    Note: If your virtual host handles multiple domain names, you need to add them all to the same certificcate. For exmample, if you have example.com and www.example.com running on the same virtual host, include them both when you run letsencrypt-auto:
+    Note: If your virtual host handles multiple domain names, you need to add them all to the same certificcate. For exmample, if you have example.com and www<span></span>.example.com running on the same virtual host, include them both when you run letsencrypt-auto:
+
     ``` bash
 cd /root/letsencrypt
 ./letsencrypt-auto --text --agree-tos --email you@example.com certonly --renew-by-default --webroot --webroot-path /home/foo/public_html/ -d example.com -d www.example.com
-```
+    ```
+
     This creates or renews certificates that are now in /etc/letsencrypt/live
 
     To install these certificates using whm or cpanel, you can use the UI or automate it.
