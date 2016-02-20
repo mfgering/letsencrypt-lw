@@ -80,7 +80,7 @@ Instructions and code for running letsencrypt on a CentOS 6 virtual private serv
     ```
 
 7. Run letsencrypt-auto for each cert you need to generate or renew
-    Note: If your virtual host handles multiple domain names, you need to add them all to the same certificcate. For exmample, if you have example.com and www<span></span>.example.com running on the same virtual host, include them both when you run letsencrypt-auto:
+    Note: If your virtual host handles multiple domain names, you need to add them all to the same certificcate. For exmample, if you have `example.com` and `www.example.com` running on the same virtual host, include them both when you run letsencrypt-auto:
 
     ``` bash
 cd /root/letsencrypt
