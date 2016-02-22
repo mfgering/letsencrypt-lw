@@ -116,8 +116,17 @@ These instructions use the *webroot* method.
 
     This creates or renews certificates that are now in */etc/letsencrypt/live*.
 
-    To install these certificates using whm or cpanel, you can use the UI or automate it.
+    To install these certificates using *whm* or *cpanel*, you can use the UI or automate it. 
 
-# Renewing Certificates<a name="renewing"></a>
+# Automation<a name="automating"></a>
+    
+You can automate certificate renewal using cron. The *letsencrypt-lw.php* 
+script in this project is an example for how to do this.
 
-# Integrating with cPanel<a name="cpanel"></a>
+Main functions of this script:
+
+* run *letsencrypt* with appropriate options to renew a certificate
+* install the renewed certificate on the webserver using the cPanel API
+* when running as a cron task, only output results for failures (to avoid
+    having cron send you email when the job succeeds)
+
