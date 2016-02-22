@@ -85,6 +85,7 @@ letsencrypt-lw [options]
                               certificate info
       --help                  flag for this message
       --debug                 flag for debugging
+
 EOF;
   my_print($help);
 }
