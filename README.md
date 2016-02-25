@@ -75,7 +75,7 @@ These instructions use the *webroot* method.
     but that's okay. The point is to initialize the *letsencrypt* environment for 
     subsequent invocations
 
-6.  Initialize a directory in each of your website document direct
+6.  Initialize a directory in each of your website root document directories
 
     To use the *webroot* domain validation method, *letsencrypt* needs read/write
     permission to a special directory named *.well-known* (notice the dot) in your website. This is no problem if you run *letsencrypt* as *root*. But the *letsencrypt* server also needs to access to *.well-known*.
