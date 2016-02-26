@@ -78,9 +78,9 @@ These instructions use the *webroot* method.
 6.  Initialize a directory in each of your website root document directories
 
     To use the *webroot* domain validation method, *letsencrypt* needs read/write
-    permission to a special directory named *.well-known* (notice the dot) in your website. This is no problem if you run *letsencrypt* as *root*. But the *letsencrypt* server also needs to access to *.well-known*.
+    permission to a special directory named *.well-known* (notice the dot) in your website. This is no problem if you run *letsencrypt* as *root*. But the *letsencrypt* server also needs to access to *.well-known* via your web server. 
 
-    Since LW runs each virtual host with a specific non-root user id, you need to create a directory where *letsencrypt* can write files.
+    Since LW runs each virtual host with a specific non-root user id, you need to create a directory where *letsencrypt* can write files and your web server can read them. If you let the *letsencrypt* script create the *.well-known* directory, your web server will **not** have permission to read from it. Hence, you need to create it manually and adjust the ownship to accommodate your web server.
 
     If your virtual host runs as user *foo*:
     ``` bash
