@@ -84,10 +84,10 @@ These instructions use the *webroot* method.
 
     If your virtual host runs as user *foo*:
     ``` bash
-    cd /home/*foo*
+    cd /home/foo
     cd public_html
     mkdir .well-known
-    chown *foo*:nobody .well-known
+    chown foo:nobody .well-known
     ```
 
     If the virtual host runs Drupal you will need to create .well-known/.htaccess with these contents:
